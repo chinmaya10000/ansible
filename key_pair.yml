@@ -10,4 +10,5 @@
       region: us-east-2
     register: keyout
 
-  - debug: msg={{keyout}}
+  - debug: 
+      var: keyout
