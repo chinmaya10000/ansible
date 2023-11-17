@@ -17,3 +17,4 @@
     copy:
       content: "{{keyout.key.private_key}}"
       dest: ./sample_key.pem
+    when: keyout.changed
