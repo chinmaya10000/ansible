@@ -18,7 +18,7 @@
     register: vpcout
 
   - debug:
-      vars: vpcout
+      var: vpcout
 
   - name: Create Public Subnet 1 in zone1
     amazon.aws.ec2_vpc_subnet:
