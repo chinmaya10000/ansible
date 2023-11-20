@@ -38,11 +38,11 @@
     register: BastionSG_out
 
   - name: Create EC2 instance 
-    amazon.aws.ec2_instance:
+    ec2:
       key_name: vprofile-key
       region: "{{region}}"
       instance_type: t2.micro
-      image_id: ami-06d4b7182ac3480fa
+      image: "{{bastion_ami}}"
       wait: yes
       wait_timeout: 300
       instance_tags:
