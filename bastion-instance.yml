@@ -14,8 +14,8 @@
       region: us-east-2
     register: key_out
 
-  - debug: 
-      var: key_out
+  #- debug: 
+      #var: key_out
   
   - name: store private key into file bastion-key.pem
     copy:
