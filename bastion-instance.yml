@@ -57,5 +57,12 @@
         Environment: Vprofile
     register: bastionHost_out
 
+  - name: Insert BastionSGid in "vars/output_vars"
+    blockinfile:
+      path: vars/output_vars
+      backup: yes
+      block: |
+        BastionSGid: {{BastionSG_out.group_id}}
+
 
   
